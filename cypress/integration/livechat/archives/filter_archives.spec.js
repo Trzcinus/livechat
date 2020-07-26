@@ -1,11 +1,12 @@
 import { JS_ELEMENTS } from '../../../support/jsElements';
+import { LOGIN } from '../../../support/loginData';
 
 context('livechat archives filter testing', () => {
   beforeEach(() => {
     cy.clearCookies();
     cy.clearLocalStorage();
     cy.visit('/archives/');
-    cy.login('m.debski+frontend_tests@livechatinc.com','test1@3$');
+    cy.login(LOGIN.email, LOGIN.password);
   });
 
   it('should show only agent 007 chat by filtering', () => {
@@ -51,7 +52,7 @@ context('livechat archives filter testing', () => {
       cy.get('#archive-item-PX0M832OIL')
       .should('be.visible')           
   });
-  
+
   it('should filter to date 10 sep 2019 and Agent Agent 007', () => {
     cy.get(JS_ELEMENTS.addFilterButton)
       .should('be.visible')
