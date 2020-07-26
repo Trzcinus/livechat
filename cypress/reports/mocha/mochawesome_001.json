@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-26T21:15:07.459Z",
+    "end": "2020-07-26T21:15:40.342Z",
+    "duration": 32883,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f1e91863-1abc-4827-988b-f587a03861a9",
+      "title": "",
+      "fullFile": "cypress/integration/livechat/archives/search_archives.spec.js",
+      "file": "cypress/integration/livechat/archives/search_archives.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36293da9-99f5-4c55-bc58-345b7aa701f6",
+          "title": "livechat archives search testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should find Client no1 chat and hide other matches",
+              "fullTitle": "livechat archives search testing should find Client no1 chat and hide other matches",
+              "timedOut": null,
+              "duration": 12107,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_jsElements.JS_ELEMENTS.searchInput).clear().type('Client no1');\ncy.contains('Client no1').should('be.visible');\ncy.contains('Client no2').should('not.be.visible');",
+              "err": {},
+              "uuid": "9eefe0a2-974f-483e-a9e8-bb28884bc918",
+              "parentUUID": "36293da9-99f5-4c55-bc58-345b7aa701f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show all chats",
+              "fullTitle": "livechat archives search testing should show all chats",
+              "timedOut": null,
+              "duration": 6990,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Client no1').should('be.visible');\ncy.contains('Client no2').should('be.visible');\ncy.contains('Client no3').should('be.visible');\ncy.contains('vv').should('be.visible');\ncy.contains('Yeet').should('be.visible');",
+              "err": {},
+              "uuid": "7425f851-bf7d-4ae7-b7a1-a647a4be352a",
+              "parentUUID": "36293da9-99f5-4c55-bc58-345b7aa701f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show chat cotaining \"Hello. How may I help you?",
+              "fullTitle": "livechat archives search testing should show chat cotaining \"Hello. How may I help you?",
+              "timedOut": null,
+              "duration": 5582,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_jsElements.JS_ELEMENTS.searchInput).clear().type('Hello. How may I help you?');\ncy.contains('Hello. How may I help you?').should('be.visible');",
+              "err": {},
+              "uuid": "dad4e231-7581-4522-9486-9db720c07696",
+              "parentUUID": "36293da9-99f5-4c55-bc58-345b7aa701f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show chat cotaining \"#$@$#@\" then remove search text",
+              "fullTitle": "livechat archives search testing should show chat cotaining \"#$@$#@\" then remove search text",
+              "timedOut": null,
+              "duration": 7981,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_jsElements.JS_ELEMENTS.searchInput).clear().type('#$@$#@');\ncy.contains('#$@$#@').should('not.be.visible');\ncy.get('[title=Clear]').click();\ncy.get(_jsElements.JS_ELEMENTS.searchInput).should('be.visible');",
+              "err": {},
+              "uuid": "b07a314f-8ec6-462d-baf7-63cbac68b0bb",
+              "parentUUID": "36293da9-99f5-4c55-bc58-345b7aa701f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9eefe0a2-974f-483e-a9e8-bb28884bc918",
+            "7425f851-bf7d-4ae7-b7a1-a647a4be352a",
+            "dad4e231-7581-4522-9486-9db720c07696",
+            "b07a314f-8ec6-462d-baf7-63cbac68b0bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32660,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-26T21:13:43.683Z",
+    "end": "2020-07-26T21:14:07.999Z",
+    "duration": 24316,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "baea682f-bde3-401f-9194-5d2d226eaffa",
+      "title": "",
+      "fullFile": "cypress/integration/livechat/archives/filter_archives.spec.js",
+      "file": "cypress/integration/livechat/archives/filter_archives.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eeb735dd-8595-42ba-83b9-fbdc44f44ca8",
+          "title": "livechat archives filter testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should show only agent 007 chat by filtering",
+              "fullTitle": "livechat archives filter testing should show only agent 007 chat by filtering",
+              "timedOut": null,
+              "duration": 8745,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_jsElements.JS_ELEMENTS.addFilterButton).should('be.visible').click();\ncy.get(_jsElements.JS_ELEMENTS.addFilterList).contains('Agent').click();\ncy.get('[title=\"Agent 007\"]').click();\ncy.get(_jsElements.JS_ELEMENTS.FilterActive).contains('Agent 007');\ncy.get('#archive-item-PX0M8WV65I').should('be.visible');",
+              "err": {},
+              "uuid": "768b2c7a-15c1-4aab-af18-7b52d807c37c",
+              "parentUUID": "eeb735dd-8595-42ba-83b9-fbdc44f44ca8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should filter to date 10 sep 2019",
+              "fullTitle": "livechat archives filter testing should filter to date 10 sep 2019",
+              "timedOut": null,
+              "duration": 7079,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_jsElements.JS_ELEMENTS.addFilterButton).should('be.visible').click();\ncy.get(_jsElements.JS_ELEMENTS.addFilterList).contains('Date').click();\ncy.get(_jsElements.JS_ELEMENTS.FilterDateCustom).click();\ncy.get(_jsElements.JS_ELEMENTS.DateFrom).clear().type('2019-09-10');\ncy.get(_jsElements.JS_ELEMENTS.DateTo).clear().type('2019-09-10');\ncy.get('.title').contains('10 Sep 2019 - 10 Sep 2019');\ncy.get('#archive-item-Q10R0Z1GJ1').should('not.be.visible');\ncy.get('#archive-item-PX0M84HFF9').should('be.visible');\ncy.get('#archive-item-PX0M8WV65I').should('be.visible');\ncy.get('#archive-item-PX0M836X7O').should('be.visible');\ncy.get('#archive-item-PX0M832OIL').should('be.visible');",
+              "err": {},
+              "uuid": "49e29c20-2775-4e19-bc23-2b6054173e07",
+              "parentUUID": "eeb735dd-8595-42ba-83b9-fbdc44f44ca8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should filter to date 10 sep 2019 and Agent Agent 007",
+              "fullTitle": "livechat archives filter testing should filter to date 10 sep 2019 and Agent Agent 007",
+              "timedOut": null,
+              "duration": 8336,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_jsElements.JS_ELEMENTS.addFilterButton).should('be.visible').click();\ncy.get(_jsElements.JS_ELEMENTS.addFilterList).contains('Date').click();\ncy.get(_jsElements.JS_ELEMENTS.FilterDateCustom).click();\ncy.get(_jsElements.JS_ELEMENTS.DateFrom).clear().type('2019-09-10');\ncy.get(_jsElements.JS_ELEMENTS.DateTo).clear().type('2019-09-10');\ncy.get('.title').contains('10 Sep 2019 - 10 Sep 2019');\ncy.get(_jsElements.JS_ELEMENTS.addFilterButton).should('be.visible').click();\ncy.get(_jsElements.JS_ELEMENTS.addFilterList).contains('Agent').click();\ncy.get('[title=\"Agent 007\"]').click();\ncy.get('#archive-item-Q10R0Z1GJ1').should('not.be.visible');\ncy.get('#archive-item-PX0M84HFF9').should('not.be.visible');\ncy.get('#archive-item-PX0M8WV65I').should('be.visible');\ncy.get('#archive-item-PX0M836X7O').should('not.be.visible');\ncy.get('#archive-item-PX0M832OIL').should('not.be.visible');",
+              "err": {},
+              "uuid": "358c9609-3bfe-45ce-9b69-7f44c63846e0",
+              "parentUUID": "eeb735dd-8595-42ba-83b9-fbdc44f44ca8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "768b2c7a-15c1-4aab-af18-7b52d807c37c",
+            "49e29c20-2775-4e19-bc23-2b6054173e07",
+            "358c9609-3bfe-45ce-9b69-7f44c63846e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24160,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

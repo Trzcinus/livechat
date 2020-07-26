@@ -1,0 +1,22 @@
+{
+  "requestTimeout" : 30000,
+  "numTestsKeptInMemory": 10,
+  "responseTimeout" : 50000,
+  "pageLoadTimeout": 100000,
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        },
+        "screenshotsFolder": "cypress/report/mochawesome-report/assets"
+    },
+  "chromeWebSecurity": false,
+  "baseUrl": "https://my.labs.livechatinc.com"
+}
