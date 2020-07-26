@@ -1,11 +1,12 @@
 import { JS_ELEMENTS } from '../../../support/jsElements';
+import { LOGIN } from '../../../support/loginData';
 
 context('livechat archives search testing', () => {
   beforeEach(() => {
     cy.clearCookies();
     cy.clearLocalStorage();
     cy.visit('/archives/');
-    cy.login('m.debski+frontend_tests@livechatinc.com','test1@3$');
+    cy.login(LOGIN.email, LOGIN.password);
   });
 
   it('should find Client no1 chat and hide other matches', () => {
@@ -17,7 +18,7 @@ context('livechat archives search testing', () => {
     cy.contains('Client no2')
       .should('not.be.visible');
   });
-  
+
   it('should show all chats', () => {
     cy.contains('Client no1')
       .should('be.visible');
